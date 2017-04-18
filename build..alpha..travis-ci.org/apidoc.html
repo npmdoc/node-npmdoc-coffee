@@ -1,0 +1,2079 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/popomore/coffee"
+
+    >coffee (v3.3.0)</a>
+</h1>
+<h4>Test command line on nodejs</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee">module coffee</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype._run">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype._run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.coverage">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.coverage
+            <span class="apidocSignatureSpan">(isCoverage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.debug">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.debug
+            <span class="apidocSignatureSpan">(level)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.end">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.end
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.expect">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.expect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.notExpect">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.notExpect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.restore">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.restore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.write">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.write
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.assert">
+            function <span class="apidocSignatureSpan">coffee.</span>assert
+            <span class="apidocSignatureSpan">(expected, actual, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.find_istanbul">
+            function <span class="apidocSignatureSpan">coffee.</span>find_istanbul
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.fork">
+            function <span class="apidocSignatureSpan">coffee.</span>fork
+            <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.inject_istanbul">
+            function <span class="apidocSignatureSpan">coffee.</span>inject_istanbul
+            <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.rule">
+            function <span class="apidocSignatureSpan">coffee.</span>rule
+            <span class="apidocSignatureSpan">(val, isOpposite)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.show">
+            function <span class="apidocSignatureSpan">coffee.</span>show
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.spawn">
+            function <span class="apidocSignatureSpan">coffee.</span>spawn
+            <span class="apidocSignatureSpan">(cmd, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee">module coffee.Coffee</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.Coffee">
+            function <span class="apidocSignatureSpan">coffee.</span>Coffee
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.super_">
+            function <span class="apidocSignatureSpan">coffee.Coffee.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype">module coffee.Coffee.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype._run">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>_run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.coverage">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>coverage
+            <span class="apidocSignatureSpan">(isCoverage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.debug">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>debug
+            <span class="apidocSignatureSpan">(level)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.end">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>end
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.expect">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>expect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.notExpect">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>notExpect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.restore">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>restore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.write">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>write
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype._run">module coffee.Coffee.prototype._run</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype._run._run">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>_run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.coverage">module coffee.Coffee.prototype.coverage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.coverage.coverage">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>coverage
+            <span class="apidocSignatureSpan">(isCoverage)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.debug">module coffee.Coffee.prototype.debug</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.debug.debug">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>debug
+            <span class="apidocSignatureSpan">(level)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.end">module coffee.Coffee.prototype.end</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.end.end">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>end
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.expect">module coffee.Coffee.prototype.expect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.expect.expect">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>expect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.notExpect">module coffee.Coffee.prototype.notExpect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.notExpect.notExpect">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>notExpect
+            <span class="apidocSignatureSpan">(type, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.restore">module coffee.Coffee.prototype.restore</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.restore.restore">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>restore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.Coffee.prototype.write">module coffee.Coffee.prototype.write</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.Coffee.prototype.write.write">
+            function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>write
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.assert">module coffee.assert</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.assert.assert">
+            function <span class="apidocSignatureSpan">coffee.</span>assert
+            <span class="apidocSignatureSpan">(expected, actual, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.find_istanbul">module coffee.find_istanbul</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.find_istanbul.find_istanbul">
+            function <span class="apidocSignatureSpan">coffee.</span>find_istanbul
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.fork">module coffee.fork</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.fork.fork">
+            function <span class="apidocSignatureSpan">coffee.</span>fork
+            <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.inject_istanbul">module coffee.inject_istanbul</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.inject_istanbul.inject_istanbul">
+            function <span class="apidocSignatureSpan">coffee.</span>inject_istanbul
+            <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.rule">module coffee.rule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.rule.rule">
+            function <span class="apidocSignatureSpan">coffee.</span>rule
+            <span class="apidocSignatureSpan">(val, isOpposite)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.show">module coffee.show</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.show.show">
+            function <span class="apidocSignatureSpan">coffee.</span>show
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.coffee.spawn">module coffee.spawn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.coffee.spawn.spawn">
+            function <span class="apidocSignatureSpan">coffee.</span>spawn
+            <span class="apidocSignatureSpan">(cmd, args, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee" id="apidoc.module.coffee">module coffee</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee" id="apidoc.element.coffee.Coffee">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Coffee(opt) {
+  EventEmitter.call(this);
+  opt || (opt = {});
+  assert(opt.method &#x26;&#x26; opt.cmd, &#x27;should specify method and cmd&#x27;);
+  this.method = opt.method;
+  this.cmd = opt.cmd;
+  this.args = opt.args;
+  this.opt = opt.opt;
+  this.restore();
+
+  var self = this;
+  this.on(&#x27;stdout_data&#x27;, function(buf) {
+    debug(&#x27;output stdout `%s`&#x27;, show(buf));
+    self._debug_stdout &#x26;&#x26; process.stdout.write(buf);
+    self.stdout += buf;
+  });
+  this.on(&#x27;stderr_data&#x27;, function(buf) {
+    debug(&#x27;output stderr `%s`&#x27;, show(buf));
+    self._debug_stderr &#x26;&#x26; process.stderr.write(buf);
+    self.stderr += buf;
+  });
+  this.on(&#x27;error&#x27;, function(err) {
+    self.error = err;
+  });
+  this.once(&#x27;close&#x27;, function(code) {
+    // restore coffee_inject_istanbul
+    process.env.coffee_inject_istanbul = &#x27;false&#x27;;
+    debug(&#x27;output code `%s`&#x27;, show(code));
+    self.code = code;
+    try {
+      assertion(self.waitAssert.stdout, self.stdout, &#x27;match stdout&#x27;);
+      assertion(self.waitAssert.stderr, self.stderr, &#x27;match stderr&#x27;);
+      assertion(self.waitAssert.code, self.code, &#x27;match code&#x27;);
+      self.error &#x26;&#x26; assertion(self.waitAssert.error, self.error.message, &#x27;match error message&#x27;);
+    } catch (err) {
+      return done(err);
+    }
+    done();
+  });
+  function done(err) {
+    self.complete = true;
+    if (self.cb) {
+      self.cb.call(self, err, {
+        stdout: self.stdout,
+        stderr: self.stderr,
+        code: self.code,
+        error: self.error,
+      });
+    } else {
+      if (err) {
+        self.emit(&#x27;complete_error&#x27;, err);
+      } else {
+        self.emit(&#x27;complete_success&#x27;, {
+          stdout: self.stdout,
+          stderr: self.stderr,
+        });
+      }
+    }
+  }
+
+  if (process.env.COFFEE_DEBUG) {
+    this.debug(process.env.COFFEE_DEBUG);
+  }
+
+  process.nextTick(this._run.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype._run" id="apidoc.element.coffee.Coffee.prototype._run">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype._run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype._run = function () {
+  this._isEndCalled = true;
+  // inject istanbul when start with istanbul and set coverage true
+  // https://github.com/gotwarlost/istanbul#multiple-process-usage
+  process.env.coffee_inject_istanbul = process.env.running_under_istanbul ? this._isCoverage : false;
+  debug(&#x27;coverage enable: %s&#x27;, process.env.coffee_inject_istanbul);
+  var cmd = this.proc = run(this.method, this.cmd, this.args, this.opt);
+
+  cmd.stdout &#x26;&#x26; cmd.stdout.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stdout_data&#x27;));
+  cmd.stderr &#x26;&#x26; cmd.stderr.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stderr_data&#x27;));
+  cmd.once(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+  cmd.once(&#x27;close&#x27;, this.emit.bind(this, &#x27;close&#x27;));
+
+  if (this.stdin.length) {
+    this.stdin.forEach(function(buf) {
+      debug(&#x27;input stdin `%s`&#x27;, show(buf));
+      cmd.stdin.write(buf);
+    });
+    cmd.stdin.end();
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.coverage" id="apidoc.element.coffee.Coffee.prototype.coverage">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.coverage
+        <span class="apidocSignatureSpan">(isCoverage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.coverage = function (isCoverage) {
+  if (isCoverage === false) {
+    this._isCoverage = false;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.debug" id="apidoc.element.coffee.Coffee.prototype.debug">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.debug
+        <span class="apidocSignatureSpan">(level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.debug = function (level) {
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+
+  // 0 (default) -&#x3e; stdout + stderr
+  // 1 -&#x3e; stdout
+  // 2 -&#x3e; stderr
+  switch (String(level)) {
+    case &#x27;1&#x27;:
+      this._debug_stdout = true;
+      break;
+    case &#x27;2&#x27;:
+      this._debug_stderr = true;
+      break;
+    case &#x27;false&#x27;:
+      this._debug_stdout = false;
+      this._debug_stderr = false;
+      break;
+    default:
+      this._debug_stdout = true;
+      this._debug_stderr = true;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.end" id="apidoc.element.coffee.Coffee.prototype.end">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.end
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.end = function (cb) {
+  this.cb = cb;
+  if (!cb) {
+    return new Promise((resolve, reject) =&#x3e; {
+      this.on(&#x27;complete_success&#x27;, resolve);
+      this.on(&#x27;complete_error&#x27;, reject);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.expect" id="apidoc.element.coffee.Coffee.prototype.expect">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.expect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.expect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.notExpect" id="apidoc.element.coffee.Coffee.prototype.notExpect">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.notExpect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.notExpect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value, true);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.restore" id="apidoc.element.coffee.Coffee.prototype.restore">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.restore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.restore = function () {
+  // cache input for command
+  this.stdin = [];
+
+  // cache output for command
+  this.stdout = &#x27;&#x27;;
+  this.stderr = &#x27;&#x27;;
+  this.code = null;
+  this.error = null;
+
+  // cache expected output
+  this.waitAssert = {
+    stderr: [],
+    stdout: [],
+    code: [],
+    error: [],
+  };
+  this.complete = false;
+  this._isEndCalled = false;
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+  this._isCoverage = true;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.write" id="apidoc.element.coffee.Coffee.prototype.write">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee.prototype.write
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Coffee.prototype.write = function (value) {
+  assert(!this._isEndCalled, &#x27;can\&#x27;t call write after end&#x27;);
+  this.stdin.push(value);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.assert" id="apidoc.element.coffee.assert">
+        function <span class="apidocSignatureSpan">coffee.</span>assert
+        <span class="apidocSignatureSpan">(expected, actual, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert = function (expected, actual, message) {
+  expected.forEach(function(rule) {
+    let isOpposite = rule.isOpposite;
+    rule = rule.value;
+
+    if (Array.isArray(rule)) {
+      return module.exports(rule, actual, message);
+    }
+
+    if (rule instanceof Error) {
+      debug(&#x27;error object %j&#x27;, rule);
+      rule = rule.message;
+    }
+
+    debug(&#x27;actual: `%s`, expected: `%s`, isOpposite: `%s`&#x27;, show(actual), show(rule), isOpposite);
+
+    const msg = &#x27;should&#x27; + (isOpposite ? &#x27; not &#x27; : &#x27; &#x27;) + message;
+
+    if (rule instanceof RegExp) {
+      return assert.strictEqual(rule.test(actual), !isOpposite,
+        msg + &#x27; expected `&#x27; + show(rule) + &#x27;` but actual `&#x27; + show(actual) + &#x27;`&#x27;);
+    }
+
+    assert[isOpposite ? &#x27;notStrictEqual&#x27; : &#x27;strictEqual&#x27;](actual, rule,
+      msg + &#x27; expected `&#x27; + show(rule) + &#x27;` but actual `&#x27; + show(actual) + &#x27;`&#x27;);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.find_istanbul" id="apidoc.element.coffee.find_istanbul">
+        function <span class="apidocSignatureSpan">coffee.</span>find_istanbul
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findIstanbul(opt) {
+  if (process.env.istanbul_bin_path) {
+    return process.env.istanbul_bin_path;
+  }
+  if (/\/istanbul$/.test(process.env._)) {
+    debug(&#x27;find istanbul %s&#x27;, process.env._);
+    return process.env._;
+  }
+
+  var filepath;
+  var dirs = [];
+
+  // $PWD
+  dirs.push(process.cwd());
+
+  // depended by some tools
+  try {
+    if (process.env._) {
+      var entryBin = require.resolve(process.env._);
+      dirs.push(path.join(entryBin, &#x27;..&#x27;));
+      dirs.push(path.join(entryBin, &#x27;../..&#x27;));
+    }
+  } catch (_) {
+    // do nothing
+  }
+  // specified $PWD
+  opt &#x26;&#x26; opt.cwd &#x26;&#x26; dirs.push(opt.cwd);
+
+  for (var i = 0, l = dirs.length; i &#x3c; l; i++) {
+    filepath = path.join(dirs[i], &#x27;node_modules/.bin/istanbul&#x27;);
+    debug(&#x27;finding istanbul %s&#x27;, filepath);
+    if (fs.existsSync(filepath)) {
+      debug(&#x27;found istanbul %s&#x27;, filepath);
+      return filepath;
+    }
+  }
+  return &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.fork" id="apidoc.element.coffee.fork">
+        function <span class="apidocSignatureSpan">coffee.</span>fork
+        <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function (modulePath, args, opt) {
+  return new Coffee({
+    method: &#x27;fork&#x27;,
+    cmd: modulePath,
+    args: args,
+    opt: opt,
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+
+```js
+coffee.<span class="apidocCodeKeywordSpan">fork</span>(&#x27;/path/to/file.js&#x27;, [&#x27;args &#x27;])
+.expect(&#x27;stdout&#x27;, &#x27;12\n&#x27;)
+.expect(&#x27;stderr&#x27;, &#x27;34\n&#x27;)
+.expect(&#x27;code&#x27;, 0)
+.end(done);
+```
+
+In file.js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.inject_istanbul" id="apidoc.element.coffee.inject_istanbul">
+        function <span class="apidocSignatureSpan">coffee.</span>inject_istanbul
+        <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inject_istanbul = function (modulePath, args, opt) {
+  if (process.env.coffee_inject_istanbul === &#x27;false&#x27;) {
+    return [modulePath, args, opt];
+  }
+  if (!process.env.istanbul_bin_path) {
+    console.warn(&#x27;istanbul bin is not found&#x27;);
+    return [modulePath, args, opt];
+  }
+
+  var cwd = process.env.coffee_cwd;
+  var istanbulBin = process.env.istanbul_bin_path;
+  var istanbulArgs = [
+    &#x27;cover&#x27;,
+    &#x27;--report&#x27;, &#x27;none&#x27;,
+    &#x27;--print&#x27;, &#x27;none&#x27;,
+    &#x27;--include-pid&#x27;,
+    &#x27;--root&#x27;, cwd,
+    &#x27;--dir&#x27;, path.join(cwd, &#x27;coverage&#x27;),
+    modulePath,
+  ];
+  if (args &#x26;&#x26; args.length) {
+    istanbulArgs.push(&#x27;--&#x27;);
+    istanbulArgs = istanbulArgs.concat(args);
+  }
+  return [istanbulBin, istanbulArgs, opt];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.rule" id="apidoc.element.coffee.rule">
+        function <span class="apidocSignatureSpan">coffee.</span>rule
+        <span class="apidocSignatureSpan">(val, isOpposite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Rule(val, isOpposite) {
+  if (Array.isArray(val)) {
+    this.value = val.map(function(item) {
+      return new Rule(item, isOpposite);
+    });
+  } else {
+    this.value = val;
+  }
+  this.isOpposite = isOpposite === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.show" id="apidoc.element.coffee.show">
+        function <span class="apidocSignatureSpan">coffee.</span>show
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function show(obj) {
+  if (obj instanceof Buffer) {
+    obj = obj.toString();
+  }
+  // escape \n to \\n for good view in terminal
+  return (typeof obj === &#x27;string&#x27; ? obj.replace(/\n/g, &#x27;\\n&#x27;) : obj) +
+    &#x27;(&#x27; + {}.toString.call(obj).replace(/^\[object (.*)\]$/, &#x27;$1&#x27;) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.spawn" id="apidoc.element.coffee.spawn">
+        function <span class="apidocSignatureSpan">coffee.</span>spawn
+        <span class="apidocSignatureSpan">(cmd, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawn = function (cmd, args, opt) {
+  return new Coffee({
+    method: &#x27;spawn&#x27;,
+    cmd: cmd,
+    args: args,
+    opt: opt,
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Coffee is useful for test command line in test frammework (like Mocha).
+
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.<span class="apidocCodeKeywordSpan">spawn</span>(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee" id="apidoc.module.coffee.Coffee">module coffee.Coffee</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.Coffee" id="apidoc.element.coffee.Coffee.Coffee">
+        function <span class="apidocSignatureSpan">coffee.</span>Coffee
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Coffee(opt) {
+  EventEmitter.call(this);
+  opt || (opt = {});
+  assert(opt.method &#x26;&#x26; opt.cmd, &#x27;should specify method and cmd&#x27;);
+  this.method = opt.method;
+  this.cmd = opt.cmd;
+  this.args = opt.args;
+  this.opt = opt.opt;
+  this.restore();
+
+  var self = this;
+  this.on(&#x27;stdout_data&#x27;, function(buf) {
+    debug(&#x27;output stdout `%s`&#x27;, show(buf));
+    self._debug_stdout &#x26;&#x26; process.stdout.write(buf);
+    self.stdout += buf;
+  });
+  this.on(&#x27;stderr_data&#x27;, function(buf) {
+    debug(&#x27;output stderr `%s`&#x27;, show(buf));
+    self._debug_stderr &#x26;&#x26; process.stderr.write(buf);
+    self.stderr += buf;
+  });
+  this.on(&#x27;error&#x27;, function(err) {
+    self.error = err;
+  });
+  this.once(&#x27;close&#x27;, function(code) {
+    // restore coffee_inject_istanbul
+    process.env.coffee_inject_istanbul = &#x27;false&#x27;;
+    debug(&#x27;output code `%s`&#x27;, show(code));
+    self.code = code;
+    try {
+      assertion(self.waitAssert.stdout, self.stdout, &#x27;match stdout&#x27;);
+      assertion(self.waitAssert.stderr, self.stderr, &#x27;match stderr&#x27;);
+      assertion(self.waitAssert.code, self.code, &#x27;match code&#x27;);
+      self.error &#x26;&#x26; assertion(self.waitAssert.error, self.error.message, &#x27;match error message&#x27;);
+    } catch (err) {
+      return done(err);
+    }
+    done();
+  });
+  function done(err) {
+    self.complete = true;
+    if (self.cb) {
+      self.cb.call(self, err, {
+        stdout: self.stdout,
+        stderr: self.stderr,
+        code: self.code,
+        error: self.error,
+      });
+    } else {
+      if (err) {
+        self.emit(&#x27;complete_error&#x27;, err);
+      } else {
+        self.emit(&#x27;complete_success&#x27;, {
+          stdout: self.stdout,
+          stderr: self.stderr,
+        });
+      }
+    }
+  }
+
+  if (process.env.COFFEE_DEBUG) {
+    this.debug(process.env.COFFEE_DEBUG);
+  }
+
+  process.nextTick(this._run.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.super_" id="apidoc.element.coffee.Coffee.super_">
+        function <span class="apidocSignatureSpan">coffee.Coffee.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype" id="apidoc.module.coffee.Coffee.prototype">module coffee.Coffee.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype._run" id="apidoc.element.coffee.Coffee.prototype._run">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>_run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_run = function () {
+  this._isEndCalled = true;
+  // inject istanbul when start with istanbul and set coverage true
+  // https://github.com/gotwarlost/istanbul#multiple-process-usage
+  process.env.coffee_inject_istanbul = process.env.running_under_istanbul ? this._isCoverage : false;
+  debug(&#x27;coverage enable: %s&#x27;, process.env.coffee_inject_istanbul);
+  var cmd = this.proc = run(this.method, this.cmd, this.args, this.opt);
+
+  cmd.stdout &#x26;&#x26; cmd.stdout.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stdout_data&#x27;));
+  cmd.stderr &#x26;&#x26; cmd.stderr.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stderr_data&#x27;));
+  cmd.once(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+  cmd.once(&#x27;close&#x27;, this.emit.bind(this, &#x27;close&#x27;));
+
+  if (this.stdin.length) {
+    this.stdin.forEach(function(buf) {
+      debug(&#x27;input stdin `%s`&#x27;, show(buf));
+      cmd.stdin.write(buf);
+    });
+    cmd.stdin.end();
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.coverage" id="apidoc.element.coffee.Coffee.prototype.coverage">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>coverage
+        <span class="apidocSignatureSpan">(isCoverage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">coverage = function (isCoverage) {
+  if (isCoverage === false) {
+    this._isCoverage = false;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- 0 (default): pipe stdout + stderr
+- 1: pipe stdout
+- 2: pipe stderr
+- false: disable
+
+Alternative you can use `COFFEE_DEBUG` env.
+
+#### coffee.<span class="apidocCodeKeywordSpan">coverage</span>()
+
+If you set false, coffee will not generate coverage.json, default: true.
+
+## LISENCE
+
+Copyright (c) 2015 popomore. Licensed under the MIT license.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.debug" id="apidoc.element.coffee.Coffee.prototype.debug">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>debug
+        <span class="apidocSignatureSpan">(level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (level) {
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+
+  // 0 (default) -&#x3e; stdout + stderr
+  // 1 -&#x3e; stdout
+  // 2 -&#x3e; stderr
+  switch (String(level)) {
+    case &#x27;1&#x27;:
+      this._debug_stdout = true;
+      break;
+    case &#x27;2&#x27;:
+      this._debug_stderr = true;
+      break;
+    case &#x27;false&#x27;:
+      this._debug_stdout = false;
+      this._debug_stderr = false;
+      break;
+    default:
+      this._debug_stdout = true;
+      this._debug_stderr = true;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Write data to stdin, see example above.
+
+#### coffee.end(callback)
+
+Callback will be called after completing the assertion, the first argument is Error if throw exception.
+
+#### coffee.<span class="apidocCodeKeywordSpan">debug</span>(level)
+
+Write data to process.stdout and process.stderr for debug
+
+`level` can be
+
+- 0 (default): pipe stdout + stderr
+- 1: pipe stdout
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.end" id="apidoc.element.coffee.Coffee.prototype.end">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>end
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (cb) {
+  this.cb = cb;
+  if (!cb) {
+    return new Promise((resolve, reject) =&#x3e; {
+      this.on(&#x27;complete_success&#x27;, resolve);
+      this.on(&#x27;complete_error&#x27;, reject);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .<span class="apidocCodeKeywordSpan">end</span>(done);
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.expect" id="apidoc.element.coffee.Coffee.prototype.expect">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>expect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .<span class="apidocCodeKeywordSpan">expect</span>(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.notExpect" id="apidoc.element.coffee.Coffee.prototype.notExpect">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>notExpect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notExpect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value, true);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.expect(&#x27;stdout&#x27;, /^abc/)
+.expect(&#x27;stdout&#x27;, [&#x27;abcdefg&#x27;, /abc/])
+.end(done);
+```
+
+Accept type: `stdout`, `stderr`, `code`, `error`
+
+#### coffee.<span class="apidocCodeKeywordSpan">notExpect</span>(type, expected)
+
+The opposite assertion of `expect`.
+
+#### coffee.write(data)
+
+Write data to stdin, see example above.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.restore" id="apidoc.element.coffee.Coffee.prototype.restore">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>restore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restore = function () {
+  // cache input for command
+  this.stdin = [];
+
+  // cache output for command
+  this.stdout = &#x27;&#x27;;
+  this.stderr = &#x27;&#x27;;
+  this.code = null;
+  this.error = null;
+
+  // cache expected output
+  this.waitAssert = {
+    stderr: [],
+    stdout: [],
+    code: [],
+    error: [],
+  };
+  this.complete = false;
+  this._isEndCalled = false;
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+  this._isCoverage = true;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.write" id="apidoc.element.coffee.Coffee.prototype.write">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>write
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (value) {
+  assert(!this._isEndCalled, &#x27;can\&#x27;t call write after end&#x27;);
+  this.stdin.push(value);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Coffee is useful for test command line in test frammework (like Mocha).
+
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .<span class="apidocCodeKeywordSpan">write</span>(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype._run" id="apidoc.module.coffee.Coffee.prototype._run">module coffee.Coffee.prototype._run</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype._run._run" id="apidoc.element.coffee.Coffee.prototype._run._run">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>_run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_run = function () {
+  this._isEndCalled = true;
+  // inject istanbul when start with istanbul and set coverage true
+  // https://github.com/gotwarlost/istanbul#multiple-process-usage
+  process.env.coffee_inject_istanbul = process.env.running_under_istanbul ? this._isCoverage : false;
+  debug(&#x27;coverage enable: %s&#x27;, process.env.coffee_inject_istanbul);
+  var cmd = this.proc = run(this.method, this.cmd, this.args, this.opt);
+
+  cmd.stdout &#x26;&#x26; cmd.stdout.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stdout_data&#x27;));
+  cmd.stderr &#x26;&#x26; cmd.stderr.on(&#x27;data&#x27;, this.emit.bind(this, &#x27;stderr_data&#x27;));
+  cmd.once(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+  cmd.once(&#x27;close&#x27;, this.emit.bind(this, &#x27;close&#x27;));
+
+  if (this.stdin.length) {
+    this.stdin.forEach(function(buf) {
+      debug(&#x27;input stdin `%s`&#x27;, show(buf));
+      cmd.stdin.write(buf);
+    });
+    cmd.stdin.end();
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.coverage" id="apidoc.module.coffee.Coffee.prototype.coverage">module coffee.Coffee.prototype.coverage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.coverage.coverage" id="apidoc.element.coffee.Coffee.prototype.coverage.coverage">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>coverage
+        <span class="apidocSignatureSpan">(isCoverage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">coverage = function (isCoverage) {
+  if (isCoverage === false) {
+    this._isCoverage = false;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- 0 (default): pipe stdout + stderr
+- 1: pipe stdout
+- 2: pipe stderr
+- false: disable
+
+Alternative you can use `COFFEE_DEBUG` env.
+
+#### coffee.<span class="apidocCodeKeywordSpan">coverage</span>()
+
+If you set false, coffee will not generate coverage.json, default: true.
+
+## LISENCE
+
+Copyright (c) 2015 popomore. Licensed under the MIT license.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.debug" id="apidoc.module.coffee.Coffee.prototype.debug">module coffee.Coffee.prototype.debug</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.debug.debug" id="apidoc.element.coffee.Coffee.prototype.debug.debug">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>debug
+        <span class="apidocSignatureSpan">(level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (level) {
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+
+  // 0 (default) -&#x3e; stdout + stderr
+  // 1 -&#x3e; stdout
+  // 2 -&#x3e; stderr
+  switch (String(level)) {
+    case &#x27;1&#x27;:
+      this._debug_stdout = true;
+      break;
+    case &#x27;2&#x27;:
+      this._debug_stderr = true;
+      break;
+    case &#x27;false&#x27;:
+      this._debug_stdout = false;
+      this._debug_stderr = false;
+      break;
+    default:
+      this._debug_stdout = true;
+      this._debug_stderr = true;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Write data to stdin, see example above.
+
+#### coffee.end(callback)
+
+Callback will be called after completing the assertion, the first argument is Error if throw exception.
+
+#### coffee.<span class="apidocCodeKeywordSpan">debug</span>(level)
+
+Write data to process.stdout and process.stderr for debug
+
+`level` can be
+
+- 0 (default): pipe stdout + stderr
+- 1: pipe stdout
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.end" id="apidoc.module.coffee.Coffee.prototype.end">module coffee.Coffee.prototype.end</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.end.end" id="apidoc.element.coffee.Coffee.prototype.end.end">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>end
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (cb) {
+  this.cb = cb;
+  if (!cb) {
+    return new Promise((resolve, reject) =&#x3e; {
+      this.on(&#x27;complete_success&#x27;, resolve);
+      this.on(&#x27;complete_error&#x27;, reject);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .<span class="apidocCodeKeywordSpan">end</span>(done);
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.expect" id="apidoc.module.coffee.Coffee.prototype.expect">module coffee.Coffee.prototype.expect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.expect.expect" id="apidoc.element.coffee.Coffee.prototype.expect.expect">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>expect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .<span class="apidocCodeKeywordSpan">expect</span>(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.notExpect" id="apidoc.module.coffee.Coffee.prototype.notExpect">module coffee.Coffee.prototype.notExpect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.notExpect.notExpect" id="apidoc.element.coffee.Coffee.prototype.notExpect.notExpect">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>notExpect
+        <span class="apidocSignatureSpan">(type, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notExpect = function (type, value) {
+  if (acceptType.indexOf(type) &#x3e; -1) {
+    var rule = new Rule(value, true);
+    if (this.complete) {
+      assertion([ rule ], this[type], &#x27;match &#x27; + type);
+    } else {
+      this.waitAssert[type].push(rule);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.expect(&#x27;stdout&#x27;, /^abc/)
+.expect(&#x27;stdout&#x27;, [&#x27;abcdefg&#x27;, /abc/])
+.end(done);
+```
+
+Accept type: `stdout`, `stderr`, `code`, `error`
+
+#### coffee.<span class="apidocCodeKeywordSpan">notExpect</span>(type, expected)
+
+The opposite assertion of `expect`.
+
+#### coffee.write(data)
+
+Write data to stdin, see example above.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.restore" id="apidoc.module.coffee.Coffee.prototype.restore">module coffee.Coffee.prototype.restore</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.restore.restore" id="apidoc.element.coffee.Coffee.prototype.restore.restore">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>restore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restore = function () {
+  // cache input for command
+  this.stdin = [];
+
+  // cache output for command
+  this.stdout = &#x27;&#x27;;
+  this.stderr = &#x27;&#x27;;
+  this.code = null;
+  this.error = null;
+
+  // cache expected output
+  this.waitAssert = {
+    stderr: [],
+    stdout: [],
+    code: [],
+    error: [],
+  };
+  this.complete = false;
+  this._isEndCalled = false;
+  this._debug_stdout = false;
+  this._debug_stderr = false;
+  this._isCoverage = true;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.Coffee.prototype.write" id="apidoc.module.coffee.Coffee.prototype.write">module coffee.Coffee.prototype.write</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.Coffee.prototype.write.write" id="apidoc.element.coffee.Coffee.prototype.write.write">
+        function <span class="apidocSignatureSpan">coffee.Coffee.prototype.</span>write
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (value) {
+  assert(!this._isEndCalled, &#x27;can\&#x27;t call write after end&#x27;);
+  this.stdin.push(value);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Coffee is useful for test command line in test frammework (like Mocha).
+
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.spawn(&#x27;cat&#x27;)
+    .<span class="apidocCodeKeywordSpan">write</span>(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.assert" id="apidoc.module.coffee.assert">module coffee.assert</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.assert.assert" id="apidoc.element.coffee.assert.assert">
+        function <span class="apidocSignatureSpan">coffee.</span>assert
+        <span class="apidocSignatureSpan">(expected, actual, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert = function (expected, actual, message) {
+  expected.forEach(function(rule) {
+    let isOpposite = rule.isOpposite;
+    rule = rule.value;
+
+    if (Array.isArray(rule)) {
+      return module.exports(rule, actual, message);
+    }
+
+    if (rule instanceof Error) {
+      debug(&#x27;error object %j&#x27;, rule);
+      rule = rule.message;
+    }
+
+    debug(&#x27;actual: `%s`, expected: `%s`, isOpposite: `%s`&#x27;, show(actual), show(rule), isOpposite);
+
+    const msg = &#x27;should&#x27; + (isOpposite ? &#x27; not &#x27; : &#x27; &#x27;) + message;
+
+    if (rule instanceof RegExp) {
+      return assert.strictEqual(rule.test(actual), !isOpposite,
+        msg + &#x27; expected `&#x27; + show(rule) + &#x27;` but actual `&#x27; + show(actual) + &#x27;`&#x27;);
+    }
+
+    assert[isOpposite ? &#x27;notStrictEqual&#x27; : &#x27;strictEqual&#x27;](actual, rule,
+      msg + &#x27; expected `&#x27; + show(rule) + &#x27;` but actual `&#x27; + show(actual) + &#x27;`&#x27;);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.find_istanbul" id="apidoc.module.coffee.find_istanbul">module coffee.find_istanbul</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.find_istanbul.find_istanbul" id="apidoc.element.coffee.find_istanbul.find_istanbul">
+        function <span class="apidocSignatureSpan">coffee.</span>find_istanbul
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findIstanbul(opt) {
+  if (process.env.istanbul_bin_path) {
+    return process.env.istanbul_bin_path;
+  }
+  if (/\/istanbul$/.test(process.env._)) {
+    debug(&#x27;find istanbul %s&#x27;, process.env._);
+    return process.env._;
+  }
+
+  var filepath;
+  var dirs = [];
+
+  // $PWD
+  dirs.push(process.cwd());
+
+  // depended by some tools
+  try {
+    if (process.env._) {
+      var entryBin = require.resolve(process.env._);
+      dirs.push(path.join(entryBin, &#x27;..&#x27;));
+      dirs.push(path.join(entryBin, &#x27;../..&#x27;));
+    }
+  } catch (_) {
+    // do nothing
+  }
+  // specified $PWD
+  opt &#x26;&#x26; opt.cwd &#x26;&#x26; dirs.push(opt.cwd);
+
+  for (var i = 0, l = dirs.length; i &#x3c; l; i++) {
+    filepath = path.join(dirs[i], &#x27;node_modules/.bin/istanbul&#x27;);
+    debug(&#x27;finding istanbul %s&#x27;, filepath);
+    if (fs.existsSync(filepath)) {
+      debug(&#x27;found istanbul %s&#x27;, filepath);
+      return filepath;
+    }
+  }
+  return &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.fork" id="apidoc.module.coffee.fork">module coffee.fork</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.fork.fork" id="apidoc.element.coffee.fork.fork">
+        function <span class="apidocSignatureSpan">coffee.</span>fork
+        <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function (modulePath, args, opt) {
+  return new Coffee({
+    method: &#x27;fork&#x27;,
+    cmd: modulePath,
+    args: args,
+    opt: opt,
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })
+})
+```
+
+You can also use fork for spawning Node processes.
+
+```js
+coffee.<span class="apidocCodeKeywordSpan">fork</span>(&#x27;/path/to/file.js&#x27;, [&#x27;args &#x27;])
+.expect(&#x27;stdout&#x27;, &#x27;12\n&#x27;)
+.expect(&#x27;stderr&#x27;, &#x27;34\n&#x27;)
+.expect(&#x27;code&#x27;, 0)
+.end(done);
+```
+
+In file.js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.inject_istanbul" id="apidoc.module.coffee.inject_istanbul">module coffee.inject_istanbul</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.inject_istanbul.inject_istanbul" id="apidoc.element.coffee.inject_istanbul.inject_istanbul">
+        function <span class="apidocSignatureSpan">coffee.</span>inject_istanbul
+        <span class="apidocSignatureSpan">(modulePath, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inject_istanbul = function (modulePath, args, opt) {
+  if (process.env.coffee_inject_istanbul === &#x27;false&#x27;) {
+    return [modulePath, args, opt];
+  }
+  if (!process.env.istanbul_bin_path) {
+    console.warn(&#x27;istanbul bin is not found&#x27;);
+    return [modulePath, args, opt];
+  }
+
+  var cwd = process.env.coffee_cwd;
+  var istanbulBin = process.env.istanbul_bin_path;
+  var istanbulArgs = [
+    &#x27;cover&#x27;,
+    &#x27;--report&#x27;, &#x27;none&#x27;,
+    &#x27;--print&#x27;, &#x27;none&#x27;,
+    &#x27;--include-pid&#x27;,
+    &#x27;--root&#x27;, cwd,
+    &#x27;--dir&#x27;, path.join(cwd, &#x27;coverage&#x27;),
+    modulePath,
+  ];
+  if (args &#x26;&#x26; args.length) {
+    istanbulArgs.push(&#x27;--&#x27;);
+    istanbulArgs = istanbulArgs.concat(args);
+  }
+  return [istanbulBin, istanbulArgs, opt];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.rule" id="apidoc.module.coffee.rule">module coffee.rule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.rule.rule" id="apidoc.element.coffee.rule.rule">
+        function <span class="apidocSignatureSpan">coffee.</span>rule
+        <span class="apidocSignatureSpan">(val, isOpposite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Rule(val, isOpposite) {
+  if (Array.isArray(val)) {
+    this.value = val.map(function(item) {
+      return new Rule(item, isOpposite);
+    });
+  } else {
+    this.value = val;
+  }
+  this.isOpposite = isOpposite === true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.show" id="apidoc.module.coffee.show">module coffee.show</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.show.show" id="apidoc.element.coffee.show.show">
+        function <span class="apidocSignatureSpan">coffee.</span>show
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function show(obj) {
+  if (obj instanceof Buffer) {
+    obj = obj.toString();
+  }
+  // escape \n to \\n for good view in terminal
+  return (typeof obj === &#x27;string&#x27; ? obj.replace(/\n/g, &#x27;\\n&#x27;) : obj) +
+    &#x27;(&#x27; + {}.toString.call(obj).replace(/^\[object (.*)\]$/, &#x27;$1&#x27;) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.coffee.spawn" id="apidoc.module.coffee.spawn">module coffee.spawn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.coffee.spawn.spawn" id="apidoc.element.coffee.spawn.spawn">
+        function <span class="apidocSignatureSpan">coffee.</span>spawn
+        <span class="apidocSignatureSpan">(cmd, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawn = function (cmd, args, opt) {
+  return new Coffee({
+    method: &#x27;spawn&#x27;,
+    cmd: cmd,
+    args: args,
+    opt: opt,
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Coffee is useful for test command line in test frammework (like Mocha).
+
+```js
+describe(&#x27;cat&#x27;, function() {
+  it(&#x27;should concat input&#x27;, function(done) {
+    var coffee = require(&#x27;coffee&#x27;);
+    coffee.<span class="apidocCodeKeywordSpan">spawn</span>(&#x27;cat&#x27;)
+    .write(&#x27;1&#x27;)
+    .write(&#x27;2&#x27;)
+    .expect(&#x27;stdout&#x27;, &#x27;12&#x27;)
+    .expect(&#x27;code&#x27;, 0)
+    .end(done);
+  })
+})
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
