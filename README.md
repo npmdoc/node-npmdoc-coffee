@@ -1,4 +1,7 @@
-# api documentation for  [coffee (v3.3.0)](https://github.com/popomore/coffee)  [![npm package](https://img.shields.io/npm/v/npmdoc-coffee.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-coffee) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-coffee.svg)](https://travis-ci.org/npmdoc/node-npmdoc-coffee)
+# npmdoc-coffee
+
+#### basic api documentation for  [coffee (v3.3.0)](https://github.com/popomore/coffee)  [![npm package](https://img.shields.io/npm/v/npmdoc-coffee.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-coffee) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-coffee.svg)](https://travis-ci.org/npmdoc/node-npmdoc-coffee)
+
 #### Test command line on nodejs
 
 [![NPM](https://nodei.co/npm/coffee.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/coffee)
@@ -82,7 +85,8 @@
         "lint": "eslint index.js lib test",
         "test": "mocha -R spec -t 80000"
     },
-    "version": "3.3.0"
+    "version": "3.3.0",
+    "bin": {}
 }
 ```
 
